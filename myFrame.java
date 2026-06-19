@@ -103,6 +103,8 @@ public class myFrame  extends JFrame implements ActionListener{
                 JOptionPane.showMessageDialog(
                     this,
                     "Fill All The Text Boxes First...");
+            }else if(!nid.getText().trim().matches("\\d{10}")){
+                JOptionPane.showMessageDialog(this,"Postal and Phone Number can hold only digits","Error",JOptionPane.ERROR_MESSAGE);
             }else{
                 String n=nid.getText().trim(),n1=name.getText().trim();
                 nextPage next= new nextPage(n,n1,area);
